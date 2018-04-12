@@ -55,7 +55,7 @@ ADD logstash-beats.key /etc/pki/tls/private/logstash-beats.key
 
 # Adding log files for processing into logstash
 ADD access01.log /var/log/nginx/access01.log
-ADD error01.log /var/log/nginx/access01.log
+ADD error01.log /var/log/nginx/error01.log
 
 ###############################################################################
 #                                    DATA
