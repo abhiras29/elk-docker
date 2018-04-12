@@ -1,0 +1,2 @@
+lordgun.org - - [07/Mar/2004:17:01:53 -0800] "GET /razor.html HTTP/1.1" 200 2869
+64.242.88.10 - - [07/Mar/2004:17:09:01 -0800] "GET /twiki/bin/search/Main/SearchResult?scope=text&regex=on&search=Joris%20*Benschop[^A-Za-z] HTTP/1.1" 200 4284

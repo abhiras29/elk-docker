@@ -50,6 +50,12 @@ RUN chmod 644 /etc/filebeat/filebeat.yml
 # CA cert
 RUN mkdir -p /etc/pki/tls/certs
 ADD logstash-beats.crt /etc/pki/tls/certs/logstash-beats.crt
+RUN mkdir -p /etc/pki/tls/private
+ADD logstash-beats.key /etc/pki/tls/private/logstash-beats.key
+
+# Adding log files for processing into logstash
+ADD access01.log /var/log/nginx/access01.log
+ADD error01.log /var/log/nginx/access01.log
 
 ###############################################################################
 #                                    DATA
