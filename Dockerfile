@@ -87,6 +87,15 @@ ADD ./logstash-init /etc/init.d/logstash
 RUN sed -i -e 's#^LS_HOME=$#LS_HOME='$LOGSTASH_HOME'#' /etc/init.d/logstash \
  && chmod +x /etc/init.d/logstash
 
+# Adding filebeat, file plugin, CSV conf files
+ADD logstash-filebeat.conf ${LOGSTASH_HOME}
+ADD logstash-file.conf ${LOGSTASH_HOME}
+ADD logstash_stock.conf ${LOGSTASH_HOME}
+RUN mkdir -p /var/lib/logstash
+RUN mkdir -p /var/lib/logstash/input
+ADD stock_table.csv /var/lib/logstash/input
+ADD TestDemo.log /var/lib/logstash/input
+
 
 ### install Kibana
 
